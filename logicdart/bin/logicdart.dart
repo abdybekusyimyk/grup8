@@ -56,58 +56,60 @@
 //   print(res5);
 // }
 
-void main(List<String> args) {
-  // for (int loop = 1; loop < 5; loop++) {
-  //   print(loop);}
+// void main(List<String> args) {
+// for (int loop = 1; loop < 5; loop++) {
+//   print(loop);}
 
-  // var numbers = [
-  //   1,
-  //   2,
-  //   3,
-  //   4,
-  //   5,
-  //   6,
-  //   7,
-  //   8,
-  //   9,
-  // ];
+// var numbers = [
+//   1,
+//   2,
+//   3,
+//   4,
+//   5,
+//   6,
+//   7,
+//   8,
+//   9,
+// ];
 
-  // for (int num in numbers) {
-  //   print(num);
-  // }
+// for (int num in numbers) {
+//   print(num);
+// }
 
-  // while
+// while
 
-  var num = 0;
-  // while (num <= 10) {
-  //   print(num);
-  //   num++;
-  // }
+// var num = 0;
+// while (num <= 10) {
+//   print(num);
+//   num++;
+// }
 
-  // do {
-  //   print(num);
-  //   num++;
-  // } while (num >= 10);
+// do {
+//   print(num);
+//   num++;
+// } while (num >= 10);
 
-  // for (int a = 0; a < 10; a++) {
-  //   if (a == 5)
-  //     // break;
-  //     continue;
-  //   print(a);
-  // }
+// for (int a = 0; a < 10; a++) {
+//   if (a == 5)
+//     // break;
+//     continue;
+//   print(a);
+// }
 
-  // braek with Label
+// braek with Label
 
-  calaganbirat: // ushsul jerge kaityp kelet
+//   calaganbirat: // ushsul jerge kaityp kelet
 
-  for (int i = 1; i <= 5; i++) {
-    ekinchi:
-    for (int j = 1; j <= 3; j++) {
-      // if (j == 3) break calaganbirat; //  programanny ushuljerden toktotup
+//   for (int i = 1; i <= 5; i++) {
+//     ekinchi:
+//     for (int j = 1; j <= 3; j++) {
+//       // if (j == 3) break calaganbirat; //  programanny ushuljerden toktotup
 
-      if (j == 2) break ekinchi;
+//       if (j == 2) break ekinchi;
 
-      print('$i ====>  $j');
-    }
-  }
-}
+//       print('$i ====>  $j');
+//     }
+//   }
+// }
+
+
