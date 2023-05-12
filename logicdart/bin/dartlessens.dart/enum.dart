@@ -26,6 +26,10 @@ void main(List<String> args) {
       }
       break;
   }
+  print('<==========================================>');
+  for (int j = 0; j < CardType.values.length; j++) {
+    print('value : ${CardType.values[j]},index : ${CardType.values[j].index}');
+  }
 }
 
 enum CardType { optima, rsk, bankAzia, aiylBank }
