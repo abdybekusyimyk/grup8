@@ -1,8 +1,8 @@
 void main(List<String> args) {
-  var sample = Sample();
-  sample.add1('hello');
-  sample.add1(3); // error
-  print(sample);
+  // var sample = Sample();
+  // sample.add1('hello');
+  // sample.add1(3); // error
+  // print(sample);
 
   var sample2 = Sample<String>();
   sample2.add2('hello');
@@ -11,16 +11,16 @@ void main(List<String> args) {
 }
 
 class Sample<T> {
-  List list1 = <T>[];
-  List list2 = <dynamic>[];
+  var list1 = [];
+  List list2 = [];
 
   void add1(T element) {
     list1.add(element);
-    print(list1);
+    // print(list1);
   }
 
   void add2(dynamic element) {
     list2.add(element);
-    print(list2);
+    // print(list2);
   }
 }
