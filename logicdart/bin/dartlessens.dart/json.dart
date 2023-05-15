@@ -7,6 +7,9 @@ void main(List<String> args) {
 
   print(person.name);
   print(person.age);
+
+  // var json = person.tojson();
+  // jsonEncode(json);  // // send to server --> --> -->
 }
 
 class Person {
@@ -15,10 +18,14 @@ class Person {
 
   Person(this.name, this.age);
 
+// maalymatardy kabyl alysh uchun
+
   Person.fromjson(Map<String, dynamic> json) {
     name = json['name'];
     age = json['age'];
   }
+
+// jonotush uchun
 
   Map<String, dynamic> tojson() {
     return {
