@@ -1,3 +1,5 @@
+import '../dartlessens.dart/typedef.dart';
+
 void main(List<String> args) {
   Mashina mashina = Mashina();
   // mashina.name;
@@ -62,4 +64,32 @@ class Tico implements Mashina {
   set san(int? _san) {
     // TODO: implement san
   }
+}
+
+abstract class Janybarlar {
+  int? bir;
+
+  int masele();
+}
+
+class Took implements Janybarlar{
+
+  @override
+  int? bir;
+
+  @override
+  int masele() {
+    // TODO: implement masele
+    throw UnimplementedError();
+  }
+
+}
+
+class It extends Janybarlar{
+  @override
+  int masele() {
+    // TODO: implement masele
+    throw UnimplementedError();
+  }
+
 }
