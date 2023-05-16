@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 // import 'buttons.dart';
 import 'package:math_expressions/math_expressions.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -75,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsets.all(15),
                       alignment: Alignment.centerRight,
                       child: Text(
-                        answer,
+                        answer.trim(),
                         style: TextStyle(
                             fontSize: 30,
                             color: Colors.white,
