@@ -1,6 +1,6 @@
 void main(List<String> args) {
   // int suma = 6;
-  int suma = 54;
+  int suma = 123;
 
   num s = suma / 6;
 
