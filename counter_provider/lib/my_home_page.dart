@@ -13,8 +13,8 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              "${context.watch<CounterProvider>().san.toString()}",
-              style: TextStyle(fontSize: 50),
+              "${context.watch<CounterProvider>().san}",
+              style: const TextStyle(fontSize: 50),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -23,18 +23,21 @@ class MyHomePage extends StatelessWidget {
                     onPressed: () {
                       context.read<CounterProvider>().increament();
                     },
-                    child: Text(
+                    child: const Text(
                       '+',
-                      style: TextStyle(fontSize: 50),
+                      style: TextStyle(
+                        fontSize: 50,
+                      ),
                     )),
                 ElevatedButton(
-                    onPressed: () {
-                      context.read<CounterProvider>().decriment();
-                    },
-                    child: Text(
-                      '-',
-                      style: TextStyle(fontSize: 50),
-                    ))
+                  onPressed: () {
+                    context.read<CounterProvider>().decriment();
+                  },
+                  child: const Text(
+                    '-',
+                    style: TextStyle(fontSize: 50),
+                  ),
+                )
               ],
             ),
           ],
