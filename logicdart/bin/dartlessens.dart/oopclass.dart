@@ -55,7 +55,7 @@ class Person {
     return name;
   }
 
-  void set aName(String name) {
+  set aName(String name) {
     this.name = name;
   }
 }
