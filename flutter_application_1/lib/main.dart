@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/first_exemple.dart';
+import 'package:flutter_application_1/adapter.dart';
+// import 'package:flutter_application_1/first_exemple.dart';
+import 'package:flutter_application_1/two_exemple.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -8,6 +10,8 @@ void main() async {
   final appDocment = await getApplicationDocumentsDirectory();
   Hive.init(appDocment.path);
   await Hive.openBox('cars');
+  Hive.registerAdapter(Adapter());
+  await Hive.openBox('person');
 
   runApp(const MyApp());
 }
@@ -23,7 +27,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FirstExemple(),
+      // home: FirstExemple(),
+      home: TwoExemple(),
     );
   }
 }
