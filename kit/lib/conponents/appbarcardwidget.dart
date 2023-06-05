@@ -11,7 +11,7 @@ class Appbarcardwidget extends StatelessWidget {
       width: 50,
       height: 50,
       child: Card(
-        color: Colors.teal,
+        color: Colors.white,
         child: Icon(
           icon,
           size: 25,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kit/conponents/bottomnavigeshbar.dart';
 import 'package:kit/modules/home/view/home_view.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      // home: const HomeView(),
+      home: Bottomnavigeshbar(),
     );
   }
 }
