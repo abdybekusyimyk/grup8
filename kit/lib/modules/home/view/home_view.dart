@@ -12,65 +12,68 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffF5F5F5),
+      appBar: AppBar(
         backgroundColor: const Color(0xffF5F5F5),
-        appBar: AppBar(
-          backgroundColor: const Color(0xffF5F5F5),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Appbarcardwidget(
-                icon: Icons.settings_outlined,
-              ),
-              const CircleAvatar(
-                  backgroundColor: Colors.tealAccent, radius: 28),
-              Appbarcardwidget(
-                icon: Icons.notifications,
-              ),
-            ],
-          ),
-        ),
-        body: Column(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Expanded(
-              // flex: 2,
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 300,
-                    height: 300,
-                    child: Card(
-                      color: Colors.tealAccent,
-                    ),
-                  )
-                ],
+            Appbarcardwidget(
+              child:
+                  SvgPicture.asset(SvgPictures.settings, fit: BoxFit.scaleDown),
+            ),
+            const CircleAvatar(backgroundColor: Colors.tealAccent, radius: 28),
+            Appbarcardwidget(
+              child: SvgPicture.asset(
+                SvgPictures.notification,
+                fit: BoxFit.scaleDown,
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: GridView.builder(
-                  itemCount: 9,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    // crossAxisSpacing: 4.0,
-                    // mainAxisSpacing: 40.0,
-                    childAspectRatio: 1.2,
-                  ),
-                  itemBuilder: (BuildContext context, int index) {
-                    return Homegridviewwidget(
-                      child:
-                          SvgPicture.asset(SvgPictures.homefridviewicon[index],
-                              // height: 6,
-                              // width: 6,
-                              fit: BoxFit.scaleDown),
-                      text: AppText.homedetail[index],
-                    );
-                  },
-                ),
-              ),
-            )
           ],
-        ));
+        ),
+      ),
+      body: Column(
+        children: [
+          const Expanded(
+            // flex: 2,
+            child: Row(
+              children: [
+                SizedBox(
+                  width: 300,
+                  height: 300,
+                  child: Card(
+                    color: Colors.tealAccent,
+                  ),
+                )
+              ],
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: GridView.builder(
+                itemCount: 9,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  // crossAxisSpacing: 4.0,
+                  // mainAxisSpacing: 40.0,
+                  childAspectRatio: 1.2,
+                ),
+                itemBuilder: (BuildContext context, int index) {
+                  return Homegridviewwidget(
+                    text: AppText.homedetail[index],
+                    child: SvgPicture.asset(SvgPictures.homefridviewicon[index],
+                        // height: 6,
+                        // width: 6,
+                        fit: BoxFit.scaleDown),
+                  );
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+    );
     // bottomNavigationBar: Bottomnavigeshbar());
   }
 }

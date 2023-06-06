@@ -13,4 +13,7 @@ class SvgPictures {
     'assets/icons/8.svg',
     'assets/icons/4.svg',
   ];
+
+  static String settings = 'assets/icons/settings 1.svg';
+  static String notification = 'assets/icons/notification 1.svg';
 }
