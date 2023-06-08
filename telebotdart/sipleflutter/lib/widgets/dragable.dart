@@ -12,26 +12,11 @@ class Exemple extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AssetsConstants.kok,
+    return const Scaffold(
+      // backgroundColor: AssetsConstants.kok,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Animate(
-              effects: [
-                FadeEffect(),
-                SlideEffect(),
-              ],
-              child: Text('data'),
-            ),
-            Text('data').animate().fade(duration: 2000.milliseconds).slide(),
-            Text('data').animate().fade(begin: .1, end: .8),
-            Text(
-              'data',
-              style: TextStyle(fontSize: 40),
-            ).animate().tint(color: Colors.teal).then().shake(),
-          ],
+          children: [],
         ),
       ),
     );
