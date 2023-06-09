@@ -22,7 +22,11 @@ class HomeView extends StatelessWidget {
               child:
                   SvgPicture.asset(SvgPictures.settings, fit: BoxFit.scaleDown),
             ),
-            const CircleAvatar(backgroundColor: Colors.tealAccent, radius: 28),
+            const CircleAvatar(
+              backgroundColor: Colors.tealAccent,
+              radius: 28,
+              backgroundImage: AssetImage('assets/images/images.jpeg'),
+            ),
             Appbarcardwidget(
               child: SvgPicture.asset(
                 SvgPictures.notification,
@@ -199,25 +203,180 @@ class HomeView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 40,
-                  ),
+                  const SizedBox(width: 20),
                   Container(
-                    width: 300,
+                    width: 365,
                     height: 280,
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(22),
+                      gradient: const LinearGradient(
                           colors: [
-                            Colors.teal,
+                            Color.fromARGB(255, 24, 30, 201),
                             // Colors.tealAccent,
                             // Colors.black87,
-                            Colors.redAccent,
-                            Colors.yellow
+                            Colors.greenAccent,
+                            Colors.red
                           ],
                           begin: Alignment.bottomLeft,
                           end: Alignment.centerRight),
                     ),
-                  )
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                'Europe travel',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                              SvgPicture.asset('assets/icons/Frame 43.svg'),
+                            ],
+                          ),
+                          const Spacer(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                '1882 8245 9831 0505',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                              const Spacer(),
+                              SvgPicture.asset(
+                                'assets/icons/touch--2 1.svg',
+                                // fit: BoxFit.scaleDown,
+                                width: 28,
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Text(
+                            '05 / 25',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Spacer(
+                            flex: 6,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: '£ 3,710.',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    TextSpan(text: '80'),
+                                  ],
+                                  style: TextStyle(
+                                      fontSize: 30, color: Colors.white),
+                                ),
+                              ),
+                              SvgPicture.asset(
+                                'assets/icons/Solid.svg',
+                                // fit: BoxFit.scaleDown,
+                                width: 95,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Container(
+                    width: 365,
+                    height: 280,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(22),
+                      gradient: const LinearGradient(
+                          colors: [
+                            Colors.black87,
+                            // Colors.tealAccent,
+                            // Colors.black87,
+                            Colors.blue,
+                            Colors.green
+                          ],
+                          begin: Alignment.bottomLeft,
+                          end: Alignment.centerRight),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                'Europe travel',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                              SvgPicture.asset('assets/icons/Frame 43.svg'),
+                            ],
+                          ),
+                          const Spacer(),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                '1882 8245 9831 0505',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                              const Spacer(),
+                              SvgPicture.asset(
+                                'assets/icons/touch--2 1.svg',
+                                // fit: BoxFit.scaleDown,
+                                width: 28,
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Text(
+                            '05 / 25',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                          const Spacer(
+                            flex: 6,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: '£ 3,710.',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    TextSpan(text: '80'),
+                                  ],
+                                  style: TextStyle(
+                                      fontSize: 30, color: Colors.white),
+                                ),
+                              ),
+                              SvgPicture.asset(
+                                'assets/icons/Solid.svg',
+                                // fit: BoxFit.scaleDown,
+                                width: 95,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
