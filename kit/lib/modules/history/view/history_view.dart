@@ -53,7 +53,67 @@ class HistoryView extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(children: [],),
+      body: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              HistoriElemetDate(
+                text: 'D',
+              ),
+              HistoriElemetDate(text: 'W'),
+              HistoriElemetDate(
+                text: 'M',
+                color: Colors.green,
+              ),
+              HistoriElemetDate(text: 'Y'),
+              HistoriElemetDate(text: 'All'),
+              const SizedBox(
+                width: 55,
+                height: 55,
+                child: Card(
+                  child: Center(
+                    child: Icon(Icons.calendar_month),
+                  ),
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class HistoriElemetDate extends StatelessWidget {
+  HistoriElemetDate({
+    super.key,
+    required this.text,
+    this.color,
+  });
+
+  String text;
+  Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
+      child: SizedBox(
+        width: 55,
+        height: 55,
+        child: Card(
+          color: color,
+          child: Center(
+            child: Text(
+              // textAlign: TextAlign.center,
+              text,
+              style: const TextStyle(fontSize: 22),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
