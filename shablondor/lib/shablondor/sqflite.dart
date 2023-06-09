@@ -1,71 +1,71 @@
-import 'package:sqflite/sqflite.dart';
+// import 'package:sqflite/sqflite.dart';
 
-class LocalDatabase{
-  Database? database;
-  String tableName="minds";
+// class LocalDatabase{
+//   Database? database;
+//   String tableName="minds";
 
-  LocalDatabase();
+//   LocalDatabase();
 
-  Future<Database> getDb() async {
-    if (database == null) {
-      database = await createDatabase();
-      return database!;
-    }
-    return database!;
-  }
+//   Future<Database> getDb() async {
+//     if (database == null) {
+//       database = await createDatabase();
+//       return database!;
+//     }
+//     return database!;
+//   }
 
-  createDatabase() async {
-    print("Database ochish uchun harakat boshlandi");
+//   createDatabase() async {
+//     print("Database ochish uchun harakat boshlandi");
 
-    String databasesPath = await getDatabasesPath();
-    String dbPath = '${databasesPath}minds.db';
-    print("Databasening manzili $dbPath");
-
-
-    var database = await openDatabase(dbPath, version: 1, onCreate: populateDb);
-    print("Database ochildi");
-    print("Database ochiqmi:   ${database.isOpen}");
-
-    return database;
-  }
+//     String databasesPath = await getDatabasesPath();
+//     String dbPath = '${databasesPath}minds.db';
+//     print("Databasening manzili $dbPath");
 
 
-  void populateDb(Database database, int version) async {
-    await database.execute("CREATE TABLE $tableName ("
-        "mind TEXT,"
-        "author TEXT"
-        ")");
-  }
+//     var database = await openDatabase(dbPath, version: 1, onCreate: populateDb);
+//     print("Database ochildi");
+//     print("Database ochiqmi:   ${database.isOpen}");
+
+//     return database;
+//   }
 
 
-  Future addMind(MindModel mind) async {
-    Database db = await getDb();
-    var id = await db.insert(tableName, mind.toJson());
-    print("Mind $id bilan databsega saqlandi");
-  }
-
-  Future<List> getMinds() async {
-    Database db = await getDb();
-
-    var result = await db.query(tableName, columns: ["author", "mind"]);
-    return result.toList();
-  }
-
-  Future updateMind(MindModel mindModel,String mind) async {
-    Database db = await getDb();
-    var id=  await db.update(tableName, mindModel.toJson(), where: "mind = ?", whereArgs: [mind]);
-   print("Update bo'ldi");
-  }
-
-  Future deleteMind(String mind) async {
-    Database db = await getDb();
-    await db.delete(tableName, where: 'mind = ?', whereArgs: [mind]);
-    print("Deteted");
-  }
-
-}
+//   void populateDb(Database database, int version) async {
+//     await database.execute("CREATE TABLE $tableName ("
+//         "mind TEXT,"
+//         "author TEXT"
+//         ")");
+//   }
 
 
-class MindModel{
+//   Future addMind(MindModel mind) async {
+//     Database db = await getDb();
+//     var id = await db.insert(tableName, mind.toJson());
+//     print("Mind $id bilan databsega saqlandi");
+//   }
+
+//   Future<List> getMinds() async {
+//     Database db = await getDb();
+
+//     var result = await db.query(tableName, columns: ["author", "mind"]);
+//     return result.toList();
+//   }
+
+//   Future updateMind(MindModel mindModel,String mind) async {
+//     Database db = await getDb();
+//     var id=  await db.update(tableName, mindModel.toJson(), where: "mind = ?", whereArgs: [mind]);
+//    print("Update bo'ldi");
+//   }
+
+//   Future deleteMind(String mind) async {
+//     Database db = await getDb();
+//     await db.delete(tableName, where: 'mind = ?', whereArgs: [mind]);
+//     print("Deteted");
+//   }
+
+// }
+
+
+// class MindModel{
   
-}
+// }

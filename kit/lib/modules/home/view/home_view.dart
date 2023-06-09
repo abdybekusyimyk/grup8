@@ -34,18 +34,128 @@ class HomeView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Expanded(
+          Expanded(
             // flex: 2,
-            child: Row(
-              children: [
-                SizedBox(
-                  width: 300,
-                  height: 300,
-                  child: Card(
-                    color: Colors.tealAccent,
-                  ),
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Column(
+                      // mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Spacer(),
+                        const Text('Todal baiance'),
+                        const SizedBox(height: 7),
+                        const Text.rich(
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '£ 23,970.',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              TextSpan(text: '30'),
+                            ],
+                            style: TextStyle(fontSize: 30),
+                          ),
+                        ),
+                        const Spacer(),
+                        const Text('This month'),
+                        const SizedBox(height: 7),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/icons/Vector 1.svg',
+                              // fit: BoxFit.scaleDown,
+                              width: 20,
+                            ),
+                            const SizedBox(width: 15),
+                            const Text.rich(
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '£ 5,235.',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(text: '25'),
+                                ],
+                                style: TextStyle(fontSize: 30),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              'assets/icons/down.svg',
+                              // fit: BoxFit.scaleDown,
+                              width: 20,
+                            ),
+                            SizedBox(width: 15),
+                            Text.rich(
+                              TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: '£ 3,710.',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  TextSpan(text: '80'),
+                                ],
+                                style: TextStyle(fontSize: 30),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                      ],
+                    ),
+                    const SizedBox(width: 35),
+                    Container(
+                      width: 350,
+                      height: 280,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        gradient: const LinearGradient(
+                            colors: [
+                              Colors.teal,
+                              // Colors.tealAccent,
+                              // Colors.black87,
+                              Colors.redAccent,
+                              Colors.yellow
+                            ],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.centerRight),
+                      ),
+                      child: Column(
+                        children: [],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    Container(
+                      width: 300,
+                      height: 280,
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              Colors.teal,
+                              // Colors.tealAccent,
+                              // Colors.black87,
+                              Colors.redAccent,
+                              Colors.yellow
+                            ],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.centerRight),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
           Expanded(
