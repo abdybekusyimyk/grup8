@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kit/conponents/bottomnavigeshbar.dart';
-import 'package:kit/modules/home/view/home_view.dart';
+// import 'package:kit/modules/home/view/home_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const HomeView(),
-      home: Bottomnavigeshbar(),
+      home: const Bottomnavigeshbar(),
     );
   }
 }
