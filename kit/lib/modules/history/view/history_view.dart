@@ -78,6 +78,9 @@ class HistoryView extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          Row(
+            children: [Text('data'), Text('data')],
           )
         ],
       ),
